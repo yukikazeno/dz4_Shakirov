@@ -5,9 +5,10 @@
         public string name;
         public string[] phrases;
         public int bruiseCount;
-
+        public AgressiveLevel agressorLevel;
         public static int FatherOperations(Grandfather grandfather, params string[] swearWords)
         {
+            grandfather.bruiseCount = 0;
             foreach (string swearWord in grandfather.phrases)
             {
                 foreach (string word in swearWords)

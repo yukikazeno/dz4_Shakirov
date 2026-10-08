@@ -157,32 +157,19 @@
 
         ExcersizeStart(4);
         string[] swearWords = new string[] { "Ш###и!", "Бл#ть", "Ёб твою мать...", "П###р", "С#ка", "С#ченыш", "Ш###и!", "расп###яй", "П###ец" };
-        Grandfather father1 = new Grandfather
+        Grandfather[] grandfathers = 
+            { 
+            new Grandfather{name = "Степан", agressorLevel = AgressiveLevel.Low, phrases = new string[] { "Ш###и!", "Гады!", "Ироды!" }}, 
+            new Grandfather{name = "Максим", agressorLevel = AgressiveLevel.Medium, phrases = new string[] { "Вот помру я...", "Бл#ть", "Ё-моё!", "Ёб твою мать..." } },
+            new Grandfather{name = "Михалыч", agressorLevel = AgressiveLevel.High, phrases = new string[] { "Проститутки!", "Твари", "П###р", "С#ка", "Я тебе ноги переломаю" }},
+            new Grandfather{name = "Владимир", agressorLevel = AgressiveLevel.Medium, phrases = new string[] { "С#ченыш", "Ш###и!", "Бл#ть", "Ах ты расп###яй", }},
+            new Grandfather{name = "Дмитрий", agressorLevel = AgressiveLevel.Low, phrases = new string[] { "Балабол!", "П###ец", "Черт" } }
+            };
+        foreach (Grandfather grandfather in grandfathers)
         {
-            name = "Степан",
-            phrases = new string[] { "Ш###и!", "Гады!", "Ироды!" }
-        };
-        Grandfather father2 = new Grandfather
-        {
-            name = "Максим",
-            phrases = new string[] { "Вот помру я...", "Бл#ть", "Ё-моё!", "Ёб твою мать..." }
-        };
-        Grandfather father3 = new Grandfather
-        {
-            name = "Михалыч",
-            phrases = new string[] { "Проститутки!", "Твари", "П###р", "С#ка", "Я тебе ноги переломаю" }
-        };
-        Grandfather father4 = new Grandfather
-        {
-            name = "Владимир",
-            phrases = new string[] { "С#ченыш", "Ш###и!", "Бл#ть", "Ах ты расп###яй", }
-        };
-        Grandfather father5 = new Grandfather
-        {
-            name = "Дмитрий",
-            phrases = new string[] { "Балабол!", "П###ец", "Черт" }
-        };
-        Console.WriteLine($"Итоговое количество синяков у: \n{father1.name} - {Grandfather.FatherOperations(father1, swearWords)} \n{father2.name} - {Grandfather.FatherOperations(father2, swearWords)} \n{father3.name} - {Grandfather.FatherOperations(father3, swearWords)} \n{father4.name} - {Grandfather.FatherOperations(father4, swearWords)} \n{father5.name} - {Grandfather.FatherOperations(father5, swearWords)}");
+            int bruiseCount = Grandfather.FatherOperations(grandfather, swearWords);
+            Console.WriteLine($"Дед {grandfather.name} получил {bruiseCount} синяков.");
+        }
         ExcersizeEnd();
     }
 }
