@@ -156,14 +156,14 @@
         }
 
         ExcersizeStart(4);
-        string[] swearWords = new string[] { "Ш###и!", "Бл#ть", "Ёб твою мать...", "П###р", "С#ка", "С#ченыш", "Ш###и!", "расп###яй", "П###ец" };
+        string[] swearWords = new string[] { "Ш###и!", "Б####", "П###р", "С###", "С###ныш", "Ш###и!", "рас######", "П#####" };
         Grandfather[] grandfathers = 
             { 
             new Grandfather{name = "Степан", agressorLevel = AgressiveLevel.Low, phrases = new string[] { "Ш###и!", "Гады!", "Ироды!" }}, 
-            new Grandfather{name = "Максим", agressorLevel = AgressiveLevel.Medium, phrases = new string[] { "Вот помру я...", "Бл#ть", "Ё-моё!", "Ёб твою мать..." } },
-            new Grandfather{name = "Михалыч", agressorLevel = AgressiveLevel.High, phrases = new string[] { "Проститутки!", "Твари", "П###р", "С#ка", "Я тебе ноги переломаю" }},
-            new Grandfather{name = "Владимир", agressorLevel = AgressiveLevel.Medium, phrases = new string[] { "С#ченыш", "Ш###и!", "Бл#ть", "Ах ты расп###яй", }},
-            new Grandfather{name = "Дмитрий", agressorLevel = AgressiveLevel.Low, phrases = new string[] { "Балабол!", "П###ец", "Черт" } }
+            new Grandfather{name = "Максим", agressorLevel = AgressiveLevel.Medium, phrases = new string[] { "Вот помру я...", "Б####", "Ё-моё!", "Ух ё" } },
+            new Grandfather{name = "Михалыч", agressorLevel = AgressiveLevel.High, phrases = new string[] { "Проститутки!", "Твари", "П###р", "С###", "Я тебе ноги переломаю" }},
+            new Grandfather{name = "Владимир", agressorLevel = AgressiveLevel.Medium, phrases = new string[] { "С###ныш", "Ш###и!", "Б####", "Ах ты рас######", }},
+            new Grandfather{name = "Дмитрий", agressorLevel = AgressiveLevel.Low, phrases = new string[] { "Балабол!", "П#####", "Черт" } }
             };
         foreach (Grandfather grandfather in grandfathers)
         {
